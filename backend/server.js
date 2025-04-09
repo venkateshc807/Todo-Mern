@@ -56,6 +56,6 @@ app.delete("/deleteTodoList/:id", (req, res) => {
         .catch((err) => res.json(err));
 });
 
-app.listen(3001, () => {
+app.listen(3002, () => {
     console.log('Server running on 3001');
 });
