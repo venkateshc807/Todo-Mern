@@ -57,5 +57,5 @@ app.delete("/deleteTodoList/:id", (req, res) => {
 });
 
 app.listen(3002, () => {
-    console.log('Server running on 3001');
+    console.log('Server running on 3002');
 });
