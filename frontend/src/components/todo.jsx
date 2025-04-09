@@ -12,7 +12,7 @@ function Todo() {
 
     // Fetch tasks from database
     useEffect(() => {
-        axios.get('http://127.0.0.1:3002/getTodoList')
+        axios.get('https://todo-mern-e6kr.onrender.com/getTodoList')
             .then(result => {
                 setTodoList(result.data);
             })
@@ -48,7 +48,7 @@ function Todo() {
             return;
         }
 
-        axios.post('http://127.0.0.1:3002/updateTodoList/' + id, editedData)
+        axios.post('https://todo-mern-e6kr.onrender.com/updateTodoList/' + id, editedData)
             .then(result => {
                 console.log(result);
                 setEditableId(null);
@@ -63,7 +63,7 @@ function Todo() {
     // Function to delete a task from the database
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this task?")) {
-            axios.delete(`http://127.0.0.1:3002/deleteTodoList/${id}`)
+            axios.delete(`https://todo-mern-e6kr.onrender.com/deleteTodoList/${id}`)
                 .then(result => {
                     console.log(result);
                     setTodoList(todoList.filter((task) => task._id !== id)); // Remove the task from the list
