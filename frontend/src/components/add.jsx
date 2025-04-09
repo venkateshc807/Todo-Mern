@@ -16,7 +16,7 @@ function Add() {
             return;
         }
 
-        axios.post('http://127.0.0.1:3001/addTodoList', { task: newTask, status: newStatus, deadline: newDeadline })
+        axios.post('http://127.0.0.1:3002/addTodoList', { task: newTask, status: newStatus, deadline: newDeadline })
             .then(res => {
                 console.log(res);
                 alert("Task added successfully!");
